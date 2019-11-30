@@ -11,6 +11,7 @@
 ;==============================================
 */
 
+// Create the variables for the assignment
 var firstName = "Janet";
 var lastName = "Blohn";
 var age = 99;
@@ -18,6 +19,7 @@ var street = "12345 Fake Street";
 var city = "Omaha";
 var zipCode = 67890;
 
+// Write all of the variables to the console
 console.log(firstName);
 console.log(lastName);
 console.log(age);
