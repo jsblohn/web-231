@@ -5,16 +5,13 @@
 ; Date: 29 November 2019
 ; Modified By: N/A
 ; Description: Assignment 1.4 - Primitive Types
-; actual age not given; I don't think it should
-; be required. It's not even legal to ask this
-; on a job application.
-;==============================================
+; ;==============================================
 */
 
 // Create the variables for the assignment
 var firstName = "Janet";
 var lastName = "Blohn";
-var age = 99;
+var age = 55;
 var street = "12345 Fake Street";
 var city = "Omaha";
 var zipCode = 67890;
