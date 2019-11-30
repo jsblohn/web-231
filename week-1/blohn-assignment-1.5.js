@@ -36,6 +36,6 @@ var formattedHireDate2 = hireDate2.toLocaleDateString();
 var formattedHireDate3 = hireDate3.toLocaleDateString();
 
 // Write the results to the console
-console.log(firstName1 + " " + lastName1 + " " + address1 + " " + formattedHireDate1 + " $" + payRate1.toFixed(1));
-console.log(firstName2 + " " + lastName2 + " " + address2 + " " + formattedHireDate2 + " $" + payRate2.toFixed(1));
-console.log(firstName3 + " " + lastName3 + " " + address3 + " " + formattedHireDate3 + " $" + payRate3.toFixed(1));
+console.log(firstName1 + " " + lastName1 + " " + address1 + " " + formattedHireDate1 + " $" + formattedPayRate1);
+console.log(firstName2 + " " + lastName2 + " " + address2 + " " + formattedHireDate2 + " $" + formattedPayRate2);
+console.log(firstName3 + " " + lastName3 + " " + address3 + " " + formattedHireDate3 + " $" + formattedPayRate3);
