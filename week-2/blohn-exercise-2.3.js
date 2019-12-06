@@ -12,7 +12,7 @@
 const header = require('../blohn-header');
 
 // Create function properties for myName function
-myName.janet = " ";
+myName.janet = "Hello Janet Blohn!";
 
 // Create a function called myName
 function myName() {
@@ -21,4 +21,4 @@ function myName() {
 
 // Write the header and the return from myName.janet
 console.log(header.display("Janet", "Blohn", "Exercise 2.3"));
-console.log(myName());
+console.log('\n' + myName());
