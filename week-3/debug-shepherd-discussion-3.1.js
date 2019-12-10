@@ -11,6 +11,9 @@
 ;===========================================
 */
 
+// Import blohn-header.js file
+const header = require('../blohn-header');
+
 /**
  * Params: Number grade between 0-100
  * Response: "A", "B", "C", "D", or "F"
@@ -33,4 +36,6 @@ function getAlphaGrade(grade) {
 }
 
 result = "The grade is " + getAlphaGrade(99) + ".";  // moved quote from behind grade to behind a space after is
+
+console.log(header.display("Janet", "Blohn", "Discussion 3.1 solution for Jeff Shepherd's program"));
 console.log(result);
