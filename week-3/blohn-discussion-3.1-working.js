@@ -12,7 +12,7 @@
 const header = require('../blohn-header');
 
 // Define variables
-var test = 5;
+var test = 5;  // This should print to the console
 var message = "";
 
 // Write a message based off the value of the variable named test
