@@ -5,6 +5,7 @@
 ; Date:   09 December 2019
 ; Modified By: N/A
 ; Description: Discussion Board 3.1 - Control Statements
+; Program with at least two errors that won't execute
 ;===========================================
 */
 
