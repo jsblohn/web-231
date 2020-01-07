@@ -1,0 +1,40 @@
+/*
+============================================
+; Title:  blohn-discussion-5.1.js
+; Author: Janet Blohn
+; Date:   07 January 2020
+; Modified By: N/A
+; Description: Discussion 5.1 - Keyed Collection Arrays
+; Keyed Collection Array program with at least two errors
+; that won't execute.
+; It should display a question asking what the capital of a
+; specific state is, and also a reply with the correct city.
+;===========================================
+*/
+
+// Import blohn-header.js file
+const header = require('../blohn-header');
+
+// Print the Header
+console.log(header.display("Janet", "Blohn", "Discussion 5.1"));
+
+// Create Map
+var capitals = new Map();
+
+// This can also be done with a simple console.log...adding for complexity
+function printCapital(value)
+{
+    console.log(value + " is the capital of " + key + ".\n");
+}
+
+// Add cities and states
+capitals.set("NE", "Lincoln");
+capitals.set("IA", "Des Moines");
+capitals.set("ND", "Bismarck");
+capitals.set("GA", "Atlanta");
+capitals.set("RI", "Providence");
+
+for (var [key, value] of capitals) {
+    console.log("What is the capital of " + key + "?");  // Ask what the capital is
+    printCapital(value);  // Go get the capital's name and reply with it
+};
