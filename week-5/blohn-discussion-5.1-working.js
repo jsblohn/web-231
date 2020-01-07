@@ -12,6 +12,23 @@
 ;===========================================
 */
 
+/* This is the expected output:
+What is the capital of NE?
+Lincoln is the capital of NE.
+
+What is the capital of IA?
+Des Moines is the capital of IA.
+
+What is the capital of ND?
+Bismarck is the capital of ND.
+
+What is the capital of GA?
+Atlanta is the capital of GA.
+
+What is the capital of RI?
+Providence is the capital of RI.
+*/
+
 // Import blohn-header.js file
 const header = require('../blohn-header');
 
