@@ -19,9 +19,6 @@ const header = require('../blohn-header');
 // Print the Header
 console.log(header.display("Janet", "Blohn", "Exercise 5.3"));
 
-// website used: https://www.famouscomposers.net/list
-// Title: List of Famous Composers
-
 // Variable - Create an array of five composer objects
 var composers = [
   {
@@ -55,9 +52,11 @@ var composers = [
     rating: 10
   }
 ]
+
 // Create Title Line
 console.log("** Composers **");
+
 // forEach Function
 composers.forEach(function(composer) {
-  console.log("First Name: " + composer.firstName + ", Last Name: " + composer.lastName + ", Genre: " + composer.genre + ", Rating: " + composer.rating);
+  console.log("Last Name: " + composer.lastName + ", Genre: " + composer.genre + ", Rating: " + composer.rating);
 })
