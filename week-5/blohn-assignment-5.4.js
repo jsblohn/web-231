@@ -2,7 +2,7 @@
 ============================================
 ; Title:  blohn-assignment-5.4.js
 ; Author: Professor Krasso
-; Date:   08 January 2020
+; Date:   09 January 2020
 ; Modified By: Janet Blohn
 ; Description: Exercise 5.4 - Filtering/Reducing Complex Data Structures
 ; Array program with 5 composer objects, a filtered array of composers by rating,
