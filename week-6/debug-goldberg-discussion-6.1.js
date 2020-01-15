@@ -31,6 +31,6 @@ var stooges = [
 
 // output
 stooges.forEach(stooge => {
-  console.log(stooge.name + " - " + hair + " Hair");  // Added plus sign after ".name"
+  console.log(stooge.name + " - " + stooge.hair + " Hair");  // Added plus sign after ".name"
 });  // Also added "stooge."" before "hair"
 //  end program
