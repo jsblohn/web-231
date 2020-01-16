@@ -1,6 +1,6 @@
 /*
 ============================================
-; Title:  blohn-assignment-6.3.js
+; Title:  blohn-assignment-6.4.js
 ; Author: Professor Krasso
 ; Date:   15 January 2020
 ; Modified By: Janet Blohn
@@ -14,7 +14,7 @@
 const header = require('../blohn-header');
 
 // Print the Header
-console.log(header.display("Janet", "Blohn", "Exercise 6.3"));
+console.log(header.display("Janet", "Blohn", "Assignment 6.4"));
 
 // Create the object literal.
 var ticket = {
