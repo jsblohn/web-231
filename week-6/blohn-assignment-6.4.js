@@ -16,6 +16,7 @@ const header = require('../blohn-header');
 // Print the Header
 console.log(header.display("Janet", "Blohn", "Exercise 6.3"));
 
+// Create the object literal.
 var ticket = {
   id: 220,
   name: "Customer Service",
@@ -29,4 +30,5 @@ var ticket = {
   }
 }
 
+// Print the results.
 console.log("Ticket " + ticket.id + " was created on " + ticket.dateCreated + " and assigned to employee " + ticket.person.firstName + " " + ticket.person.lastName + " (" + ticket.person.jobTitle + ").");

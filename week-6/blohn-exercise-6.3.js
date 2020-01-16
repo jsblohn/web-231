@@ -16,12 +16,14 @@ const header = require('../blohn-header');
 // Print the Header
 console.log(header.display("Janet", "Blohn", "Exercise 6.3"));
 
+// Create the object literal.
 var ticket = {
   id: 300,
   name: 'Customer Service',
   requestor: 'John Smith',
 }
 
+// Format the fields for output by creating a string with all properties and values.
 var output = '';
 var i = 0;
 var count = Object.keys(ticket).length;
@@ -37,4 +39,5 @@ for (var property in ticket) {
   }
 }
 
+// Print the results.
 console.log("{" + output + "}");
