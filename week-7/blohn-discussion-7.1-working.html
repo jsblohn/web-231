@@ -1,0 +1,50 @@
+<!--
+============================================
+; Title:  blohn-discussion-7.1.js
+; Author: Janet Blohn
+; Date:   21 January 2020
+; Modified By: N/A
+; Description: Discussion 7.1 Objects and Built-in Objects
+; HTML with embedded JavaScript and two errors
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+	    <meta charset="UTF-8">
+      <title>Blohn Discussion 7.1</title>
+      <script>
+      // Function to change webpage background color
+      function changeBackGround(color){
+        document.body.style.background = color;
+      }
+
+      // Function to change font color
+      function changeFontColor(color){
+        document.getElementById("font").style.color = color;
+      }
+      </script>
+  </head>
+  <body>
+    <div id="font">
+	    <h1>Discussion 7.1 Assignment</h1>
+
+      <p>What color would you like the background?</p>
+	    <!-- Change the Background Color -->
+      <button type="button" onclick="changeBackGround('green');">Green</button>
+	    <p>or</p>
+	    <button type="button" onclick="changeBackGround('gold');">Gold</button>
+    	<p>or how about</p>
+    	<button type="button" onclick="changeBackGround('pink');">Pink</button>
+
+      <p>What color would you like the text?</p>
+      <!-- Change the Font Color for All Text on Page -->
+      <button type="button" onclick="changeFontColor('red');">Red</button>
+	    <p>or</p>
+	    <button type="button" onclick="changeFontColor('blue');">Blue</button>
+	    <p>or maybe</p>
+	    <button type="button" onclick="changeFontColor('purple');">Purple</button><br><br>
+      <button type="button" onclick="changeFontColor('black'); changeBackGround('white');">Reset to Default Colors</button>
+	  </div>
+  </body>
+</html>
