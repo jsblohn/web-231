@@ -1,14 +1,53 @@
+<!--
+;============================================
+; Title:  blohn-exercise-7.3.html
+; Author: Janet Blohn
+; Date:   23 January 2020
+; Modified By: N/A
+; Description: Exercise 7.3 Client-Side JavaScript
+; Create an Ordered List and an HTML Table
+;===========================================
+-->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Exercise 7.3</title>
+  <head>
+    <meta charset="UTF-8">
+    <title>Exercise 7.3</title>
+    <link rel="stylesheet" href="../site.css">
+  </head>
+  <body>
+    <script>
+      document.write('\
+      <h1>SHOPPING LIST v.1</h1>\
+      <ol>\
+        <li>Dog Food</li>\
+        <li>Milk</li>\
+        <li>Cat Litter</li>\
+        <li>Bananas</li>\
+        <li>Eggs</li>\
+        </ol>')
+    </script>
 
-  <link rel="stylesheet" href="../site.css">
-</head>
-<body>
+    <div id="groceries"></div>
 
-<div id="list"></div>
-
-</body>
+    <script>
+      document.getElementById("groceries").innerHTML = "<h1>SHOPPING LIST v.2</h1>"+
+      "<table>"+
+      "<thead>"+
+      "<tr>"+
+      "<th>Id</th>"+
+      "<th>Item</th>"+
+      "</tr>"+
+      "</thead>"+
+      "<tbody>"+
+        "<tr><td>1</td><td>Dog Food</td></tr>"+
+        "<tr><td>2</td><td>Milk</td></tr>"+
+        "<tr><td>3</td><td>Cat Litter</td></tr>"+
+        "<tr><td>4</td><td>Bananas</td></tr>"+
+        "<tr><td>5</td><td>Eggs</td></tr>"+
+      "</tbody>"+
+      "</table>"
+    </script>
+  </body>
 </html>
