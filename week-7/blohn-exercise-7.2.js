@@ -1,11 +1,12 @@
 /*
-============================================
+;============================================
 ; Title:  blohn-exercise-7.2.js
 ; Author: Professor Krasso
 ; Date:   23 January 2020
 ; Modified By: Janet Blohn
 ; Description: Exercise 7.2 Constructor Functions
 ; Create a constructor objects, add five objects to it and output the results.
+;===========================================
 */
 
 "use strict";
