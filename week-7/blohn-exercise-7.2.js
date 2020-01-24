@@ -16,6 +16,7 @@ const header = require('../blohn-header');
 // Print the Header
 console.log(header.display("Janet", "Blohn", "Exercise 7.2"));
 
+// Create the Employee constructor object.
 function Employee(id, firstName, lastName, title) {
   this.id = id;
   this.firstName = firstName;
@@ -24,6 +25,7 @@ function Employee(id, firstName, lastName, title) {
 
 }
 
+// Populate an array with 5 employee objects.
 var employees = [
   new Employee(100, "Don", "Jones", "Software Engineer"),
   new Employee(220, "Joe", "Smith", "Scrum Master"),
@@ -32,6 +34,7 @@ var employees = [
   new Employee(580, "Brenda", "White", "QA Analyst")
 ];
 
+// Loop through and output the objects.
 employees.forEach(function(person) {
   console.log(person.id, person.firstName, person.lastName, person.title);
 });
