@@ -1,0 +1,52 @@
+<!--
+============================================
+; Title:  discussion 8.1.html
+; Author: Diandra McKenzie
+; Date:   29 January 2020
+; Modified By:  Janet Blohn
+; Description:  A simple HTML page with at least (2) jQuery errors
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Discussion 8.1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--link to my css file-->
+    <link rel="stylesheet" href="C:\Users\Diandra\bu-webdev\web-231\site.css">
+  </head>
+  <body>
+    <h1>Lorem Ipsum</h1>
+    <h2>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h2>
+    <br>
+    <h3>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+       Aenean sollicitudin arcu in massa pharetra, et tincidunt metus feugiat.
+       Vivamus consectetur blandit purus. Cras ligula elit, imperdiet sit amet
+       leo sit amet, consectetur mattis ex. Phasellus bibendum faucibus enim sed
+       consequat. Praesent porttitor odio eget molestie pretium. Aliquam fringilla
+       scelerisque augue, vitae scelerisque sapien euismod eget. Nullam non elit
+       eu ex tincidunt lobortis. Nullam diam purus, lobortis sed ipsum non, bibendum
+       dapibus ipsum. Nulla ornare dapibus nisi vitae rhoncus. Integer ut varius augue.
+       Etiam eu pulvinar arcu. Nulla vulputate massa nec urna vulputate pretium.
+       Vestibulum sed efficitur ipsum. Proin interdum velit et odio faucibus cursus.
+       Vivamus nec lorem aliquet, egestas nisi eget, gravida arcu.</p>
+
+  <script>
+  // jQuery onClick event
+    $(function() {
+      //$("h3")click(function() {
+      $("h3").click (function() {
+        //$("p").fadeOut(1000, function() {
+        $("p").fadeOut(1000);
+          alert("The paragraph is now hidden");
+      });
+    });
+  </script>
+</body>
+</html>
