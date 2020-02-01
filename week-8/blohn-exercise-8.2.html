@@ -1,0 +1,81 @@
+<!--
+============================================
+; Title:  blohn-exercise-8.2.html
+; Author: Janet Blohn
+; Date:   30 January 2020
+; Modified By: N/A
+; Description: Exercise 8.2 Dynamic HTML
+; Create an array of fruits and output it to an unordered list
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Exercise 8.2</title>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
+
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0px;
+      }
+
+      .topBar {
+        height: 20px;
+        background-color: darkolivegreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="fruits"></div>
+      <script>
+      // Create the Fruit constructor object.
+        function Fruit(id, type) {
+          this.id = id;
+          this.type = type;
+        }
+
+        // Create the fruits.
+        var fruits = [
+          new Fruit(100, "Banana"),
+          new Fruit(200, "Apple"),
+          new Fruit(300, "Orange"),
+          new Fruit(400, "Grape"),
+          new Fruit(500, "Kiwi")
+          ];
+
+        // Create the Unordered List
+        var out = "<div class='topBar'></div><h3>Fruit</h3><ul>"
+
+          fruits.forEach(function(fruit) {
+            out += "<li>" + fruit.id + " " + fruit.type + "</li>";});
+          out += "</ul>";
+
+          var elements = document.getElementsByTagName('h3');
+          for(var i=0, l=elements.length; i<l; i++){
+          elements[i].style.paddingTop = "20px";}
+
+          document.getElementById('fruits').innerHTML = out;
+
+          // The following 2 lines center the list.
+          document.getElementById('fruits').style.margin = "0px auto";
+          document.getElementById('fruits').style.textAlign = "center";
+
+          // Create the H1 and intentionally don't center it.
+          document.body.onload = addH1;
+
+          function addH1() {
+            var newH1 = document.createElement("h1");
+            var newHeading = document.createTextNode("Exercise 8.2");
+            newH1.appendChild(newHeading);
+
+            var currentList = document.getElementById("fruits");
+            document.body.insertBefore(newH1, currentList);
+          }
+      </script>
+  </body>
+</html>

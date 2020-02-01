@@ -1,0 +1,111 @@
+<!--
+============================================
+; Title:  blohn-exercise-8.3.html
+; Author: Janet Blohn
+; Date:   31 January 2020
+; Modified By: N/A
+; Description: Exercise 8.3 jQuery
+; Create a table and an ordered list
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Exercise 8.3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../site.css">
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
+
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+
+      .topBar {
+        height: 20px;
+        background-color: cadetblue;
+      }
+
+      table {
+        border-collapse: collapse;
+        }
+
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 5px;
+      }
+
+      th {
+        background-color: darkcyan;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: lightseagreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Exercise 8.3</h1>
+    <div class="topBar"></div>
+    <section>
+      <h3>A Sample of Lorem Ipsum</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac dolor elementum, condimentum mi eu, varius neque. Nullam sed risus arcu. Nulla semper massa vitae ipsum dapibus consequat. Aenean sit amet molestie nisl. Donec enim mauris, hendrerit a sem sed, ultricies luctus ex. Pellentesque diam tortor, dictum a ullamcorper eget, rutrum ac sem. Nam porta porttitor faucibus. Sed sem metus, posuere eget neque et, fermentum pellentesque metus. Maecenas sit amet hendrerit augue. Vivamus non pulvinar turpis. Nullam tempor ex ac arcu maximus, imperdiet sollicitudin eros maximus. Aliquam auctor magna nulla, a semper nisl hendrerit nec. Vivamus bibendum interdum semper. Curabitur nibh eros, tincidunt aliquam tincidunt nec, volutpat a ipsum. </p>
+      <button>Toggle</button>
+    </section>
+    <div class="topBar"></div>
+    <section>
+    <div id="fruits"></div>
+    </section>
+    <script>
+      // Create the Fruit constructor object.
+      function Fruit(id, type) {
+        this.id = id;
+        this.type = type;
+      }
+
+      // Create the Fruits
+      var fruits = [
+        new Fruit(100, "Banana"),
+        new Fruit(200, "Apple"),
+        new Fruit(300, "Orange"),
+        new Fruit(400, "Grape"),
+        new Fruit(500, "Kiwi")
+        ];
+
+      // Create the Fruit HTML Table with a Title using JavaScript
+      var out = "<h3>Fruits</h3><table><thead><tr><th>ID</th><th>Type</th></tr></thead><tbody>"
+
+      fruits.forEach(function(fruit) {
+        out += "<tr><td class='showAlert'>" + fruit.id + "</td><td>" + fruit.type + "</td></tr>";});
+      out += "</tbody></table>";
+
+      document.getElementById('fruits').innerHTML = out;
+
+      // Move the sections 20px under the topBar, 20px from the left side
+      // Also set a margin between each section
+      var elements = document.getElementsByTagName('section');
+      for(var i=0, l=elements.length; i<l; i++){
+        elements[i].style.paddingTop = "20px";
+        elements[i].style.paddingLeft = "20px";
+        elements[i].style.marginBottom = "20px";}
+
+      // jQuery Click Events
+      //Toggle the Lorem Ipsum paragraph from visible to hidden
+      $("button").click (function() {
+        $("p").toggle();
+      });
+
+      // Show an alert when the Fruit ID is clicked
+      $(function() {
+        $(".showAlert").click(function(event) {
+          event.preventDefault();
+          var fruitId = $(this).text();
+          var fruitType = $(this).closest("td").next().text();
+          alert("ID: " + fruitId + ", Type: " + fruitType);
+        });
+      });
+    </script>
+  </body>
+</html>
