@@ -1,0 +1,84 @@
+<!--
+============================================
+; Title:  blohn-assignment-8.4.html
+; Author: Janet Blohn
+; Date:   01 February 2020
+; Modified By: N/A
+; Description: Assignment 8.4 Putting it all together
+; Create an employee table, select an employee from the table, and create
+; an alert with the results of the row.
+============================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 8.4</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- you will need to the href to point to your root directories css file -->
+  <link rel="stylesheet" href="../site.css">
+
+  <style type="text/css">
+    #employee tbody tr:hover {
+      cursor: pointer;
+      background-color: #ffff99;
+    }
+  </style>
+</head>
+<body>
+
+<div id="emps"></div>
+
+<script type="text/javascript">
+// Create the Employee constructor object.
+function Employee(id, firstName, lastName, title) {
+  this.id = id;
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.title = title;
+}
+
+// Create and populate an array with 5 employee objects.
+var employees = [
+  new Employee("10", "Brenda", "Jones", "Product Owner"),
+  new Employee("20", "Scott", "Brown", "Scrum Master"),
+  new Employee("30", "Mike", "Smith", "Software Developer"),
+  new Employee("40", "Hilda", "Carlson", "System Programmer"),
+  new Employee("50", "Earl", "Johnson", "Director"),
+]
+
+// getEmployee Function
+function getEmployee(id) {
+// Loop through to find the matching employee and send an alert.
+employees.forEach(function(person) {
+  if(id === person.id)
+    alert(`${person.id} ${person.firstName} ${person.lastName} ${person.title}`);
+});
+}
+
+// Create the Employee HTML Table with a Title using JavaScript
+var output = "<h2>Employee Listing</h2> <table id = employee><thead><tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Title</th></tr></thead><tbody>"
+// Loop through each employee and put them in the table.
+employees.forEach(function(person) {
+  output += "<tr><td>" + person.id + "</td><td>" + person.firstName + "</td><td>" + person.lastName + "</td><td>" + person.title+ "</td></tr>";
+});
+output += "</tbody></table>";
+
+// Write the table out.
+document.getElementById('emps').innerHTML = output;
+
+ // jQuery onClick event
+ // Don't remove this, just add your code to the body of the event (curly braces)
+ $(function () {
+   $("table tr").click(function () {
+     event.preventDefault();
+     // Define a variable to store the first cell which is the employee id.
+     var empsId = $(this).find("td:first").html();
+     getEmployee(empsId);
+ });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+;===========================================
+; Title: Discussion 8.1
+; Author: Emily Richter
+; Date: 30 January 2020
+; Modified By: Janet Blohn
+; Description: Create a program with at least
+; two jQuery errors.
+;===========================================
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <title>Discussion 8.1</title>
+  <link rel="stylesheet" href="../site.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style type="text/css">
+  </style>
+</head>
+<body>
+
+  <button type="button">Click Here</button>
+
+  <p class="hide">Let's see if something happens.</p>
+
+  <p></p>
+
+<script>
+/* Button should disappear when clicked. */
+$(document).ready(function()
+{
+$("button").click(function() {
+  $("button").animate({opacity: '0.0'}, "slow");
+  $("p.hide").hide();
+  //var popup = $(<p></p>).text("Where'd it go?");
+  var popup = $('p').text("Where'd it go?");
+  //$("p.hide").after("popup");
+  $("p.hide").after(popup);
+});
+
+});
+
+</script>
+
+</body>
+</html>
