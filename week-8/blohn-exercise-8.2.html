@@ -6,6 +6,7 @@
 ; Modified By: N/A
 ; Description: Exercise 8.2 Dynamic HTML
 ; Create an array of fruits and output it to an unordered list
+============================================
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -55,10 +56,12 @@
             out += "<li>" + fruit.id + " " + fruit.type + "</li>";});
           out += "</ul>";
 
+          // Add padding to the top of H3 Elements.
           var elements = document.getElementsByTagName('h3');
           for(var i=0, l=elements.length; i<l; i++){
           elements[i].style.paddingTop = "20px";}
 
+          // Write the table out.
           document.getElementById('fruits').innerHTML = out;
 
           // The following 2 lines center the list.
@@ -68,6 +71,7 @@
           // Create the H1 and intentionally don't center it.
           document.body.onload = addH1;
 
+          // Create the H1 Element with JavaScript
           function addH1() {
             var newH1 = document.createElement("h1");
             var newHeading = document.createTextNode("Exercise 8.2");
